@@ -1,0 +1,15 @@
+name = "free-ip"
+main = "src/index.ts"
+compatibility_date = "2026-10-25"
+
+[vars]
+CHECK_TARGET = "https://www.cloudflare.com/cdn-cgi/trace"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "free-ip-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["*/15 * * * *"]
